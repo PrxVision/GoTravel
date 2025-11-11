@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>GoTravel — Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="loginPage" class="page-auth">
+  <div data-role="header" data-position="fixed" class="gt-header">
+    <h1 class="fw-semibold">GoTravel</h1>
+  </div>
+
+  <div role="main" class="ui-content p-0">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-11 col-sm-9 col-md-6">
+          <div class="card shadow-lg border-0 rounded-4">
+            <div class="card-body p-4 p-md-5">
+              <div class="text-center mb-4">
+                <i class="bi bi-airplane-engines display-5 d-block"></i>
+                <h2 class="h4 mt-2 mb-0">Welcome back</h2>
+                <p class="text-muted small">Sign in to plan your next trip</p>
+              </div>
+
+              <form id="loginForm" novalidate data-ajax="false" action="javascript:void(0);">
+                <div class="mb-3">
+                  <label for="username" class="form-label">Username or Email</label>
+                  <input type="text" class="form-control form-control-lg" id="username" placeholder="e.g. harvin.g">
+                  <div class="invalid-feedback">Please enter your username or email.</div>
+                </div>
+
+                <div class="mb-2">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control form-control-lg" id="password" placeholder="Minimum 6 characters">
+                  <div class="invalid-feedback">Password must be at least 6 characters.</div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="rememberMe">
+                    <label class="form-check-label small" for="rememberMe">Remember me</label>
+                  </div>
+                  <a href="#" data-ajax="false" class="small text-decoration-none">Forgot password?</a>
+                </div>
+
+                <!-- Button calls JS handler -->
+                <button type="button" id="loginBtn" onclick="handleLogin()" class="btn btn-primary btn-lg w-100 rounded-3">
+                  <i class="bi bi-box-arrow-in-right me-1"></i> Log in
+                </button>
+              </form>
+
+              <p class="text-center small text-muted mt-4 mb-0">
+                By continuing you agree to our <a href="#" data-ajax="false" class="text-decoration-none">Terms</a>.
+              </p>
+            </div>
+          </div>
+
+          <p class="text-center mt-4 mb-0 small">
+            New here? <a href="#" data-ajax="false" class="text-decoration-none">Create account</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-role="footer" data-position="fixed" class="gt-footer text-center small">
+    <div class="py-2">© <span id="yearNow"></span> GoTravel</div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
